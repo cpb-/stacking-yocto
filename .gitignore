@@ -1,0 +1,6 @@
+.cookerconfig
+builds/
+downloads/
+sstate-cache/
+layers/meta-openembedded
+layers/poky
