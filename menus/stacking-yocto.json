@@ -21,6 +21,15 @@
 				"MACHINE = 'qemux86-64'                ",
 				"IMAGE_ROOTFS_EXTRA_SPACE = '83886080' "
 			]
+		},
+
+		"stacking-arm" : {
+			"target": "stacking-image",
+
+			"local.conf": [
+				"MACHINE = 'qemuarm'                ",
+				"IMAGE_ROOTFS_EXTRA_SPACE = '41943040' "
+			]
 		}
 	}
 }
