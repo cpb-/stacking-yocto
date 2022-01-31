@@ -14,20 +14,20 @@
         ],
 
 	"builds" : {
-		"stacking-x86" : {
+		"stacking-arm" : {
 			"target": "stacking-image",
 
                         "local.conf": [
-				"MACHINE = 'qemux86-64'                ",
+				"MACHINE = 'qemuarm64'                ",
 				"IMAGE_ROOTFS_EXTRA_SPACE = '83886080' "
 			]
 		},
 
-		"stacking-arm" : {
+		"stacking-x86" : {
 			"target": "stacking-image",
 
 			"local.conf": [
-				"MACHINE = 'qemuarm'                ",
+				"MACHINE = 'qemux86-64'                ",
 				"IMAGE_ROOTFS_EXTRA_SPACE = '41943040' "
 			]
 		}
