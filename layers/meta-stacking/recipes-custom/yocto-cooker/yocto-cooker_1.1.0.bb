@@ -11,8 +11,11 @@ PYPI_SRC_URI = "git://git@github.com/cpb-/yocto-cooker.git"
 
 S = "${WORKDIR}/git"
 
-RDEPENDS:${PN} += "\
-    python3-core \
+RDEPENDS:${PN} += "       \
+    python3-core          \
+    python3-urllib3       \
+    python3-pkg-resources \
+    python3-jsonschema    \
 "
 
 BBCLASSEXTEND = "native"
