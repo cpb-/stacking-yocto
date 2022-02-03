@@ -1,8 +1,49 @@
 # Stacking Yocto Project based Qemu images.
 
-## Work in Progress.
+This small project aims to run a qemux86-64 system produced by Yocto Project into a qemuarm-64 system itself produced by Yocto Project and running on a x86-64 PC.
 
-This project is currently in progress. Don't pay attention to it for the moment.
+```
+  +-----------------------------------------------------------+
+  | +-------------------------------------------------------+ |
+  | |                                                       | |
+  | |  +-------------------------------------------------+  | |
+  | |  | +---------------------------------------------+ |  | |
+  | |  | |                                             | |  | |
+  | |  | |  +---------------------------------------+  | |  | |
+  | |  | |  | +-----------------------------------+ |  | |  | |
+  | |  | |  | |                  +-------+        | |  | |  | |
+  | |  | |  | |                  | Shell |        | |  | |  | |
+  | |  | |  | |                  +-------+        | |  | |  | |
+  | |  | |  | | Userspace                         | |  | |  | |
+  | |  | |  | +-----------------------------------+ |  | |  | |
+  | |  | |  | +-----------------------------------+ |  | |  | |
+  | |  | |  | | Kernel                            | |  | |  | |
+  | |  | |  | +-----------------------------------+ |  | |  | |
+  | |  | |  | Qemu x86-64                           |  | |  | |
+  | |  | |  +---------------------------------------+  | |  | |
+  | |  | |                                             | |  | |
+  | |  | | Userspace                                   | |  | |
+  | |  | +---------------------------------------------+ |  | |
+  | |  | +---------------------------------------------+ |  | |
+  | |  | | Kernel                                      | |  | |
+  | |  | +---------------------------------------------+ |  | |
+  | |  | Qemu Arm-64                                     |  | |
+  | |  +-- ----------------------------------------------+  | |
+  | |                                                       | |
+  | | Userspace                                             | |
+  | +-------------------------------------------------------+ |
+  | +-------------------------------------------------------+ |
+  | | Kernel                                                | |
+  | +-------------------------------------------------------+ |
+  | PC x86-64                                                 |
+  +-----------------------------------------------------------+
+```
 
-I'll describe its features in a near future.
+The real interest is that the inner system production by Yocto is done inside the middle emulator.
+
+So a Yocto Project based image is able to produce a Yocto Project image.
+
+I think it's the only interest of this experiment ;-)
+
+There is a (french) article describing this project [here](https://www.blaess.fr/christophe/2022/02/03/5973/).
 
