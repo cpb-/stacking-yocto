@@ -6,9 +6,10 @@ inherit core-image
 
 # A non-priviledged user to run the build.
 inherit extrausers
-EXTRA_USERS_PARAMS_append = "usermod -P 'root'   root;"
-EXTRA_USERS_PARAMS_append = "useradd -P 'stack' stack;"
-EXTRA_USERS_PARAMS_append = "usermod -a -G sudo stack;"
+# Hashed password for 'root' is 'root', for 'stack' is 'stack"
+EXTRA_USERS_PARAMS:append = "usermod -p '\$5\$7q4vxRzF\$TBB6wzmOnlIej7G6GqG0obv.pNMmh.KcKzk0usqHpZ/'   root;"
+EXTRA_USERS_PARAMS:append = "useradd -p '\$5\$HkaWyz4n\$rsa5PaSktz.j79zQmsV2jDBJHpo.0/qGF1EFbINhW03' stack;"
+EXTRA_USERS_PARAMS:append = "usermod -a -G sudo stack;"
 IMAGE_INSTALL:append = " sudo"
 
 # Comfortable shell and editor.
