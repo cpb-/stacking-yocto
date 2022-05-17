@@ -28,7 +28,7 @@
 
 			"local.conf": [
 				"MACHINE = 'qemux86-64'                ",
-				"IMAGE_ROOTFS_EXTRA_SPACE = '41943040' "
+				"IMAGE_ROOTFS_EXTRA_SPACE = '1048576' "
 			]
 		}
 	}
